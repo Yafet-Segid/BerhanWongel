@@ -1,7 +1,13 @@
 import { GoogleGenAI } from "@google/genai";
 
 // Safely check for API key availability
-const apiKey = process.env.API_KEY || '';
+let apiKey = '';
+try {
+  // @ts-ignore
+  apiKey = (typeof process !== 'undefined' && process.env && process.env.API_KEY) ? process.env.API_KEY : '';
+} catch (e) {
+  console.warn("Environment variables not available, skipping AI initialization.");
+}
 
 let ai: GoogleGenAI | null = null;
 

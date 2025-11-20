@@ -31,6 +31,9 @@
               'float': 'float 6s ease-in-out infinite',
               'gradient-xy': 'gradient-xy 15s ease infinite',
               'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'fade-in-up': 'fadeInUp 1s ease-out forwards',
+              'fade-in-down': 'fadeInDown 1s ease-out forwards',
+              'fade-in': 'fadeIn 1s ease-out forwards',
             },
             keyframes: {
               float: {
@@ -46,6 +49,18 @@
                     'background-size': '200% 200%',
                     'background-position': 'right center'
                 }
+              },
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              fadeInDown: {
+                '0%': { opacity: '0', transform: 'translateY(-20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
               }
             }
           }
@@ -65,6 +80,6 @@
 </head>
   <body class="bg-brand-light text-gray-800 font-sans antialiased selection:bg-brand-rose selection:text-white overflow-x-hidden">
     <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
+    <script type="module" src="./index.tsx"></script>
   </body>
 </html>

@@ -74,9 +74,9 @@ const BookAd: React.FC<BookAdProps> = ({ language }) => {
           {/* Right Side: Image */}
           <div className="md:w-1/2 relative h-[200px] md:h-auto bg-gray-50">
             <img 
-              src="https://image-resource-service-130145399.us-central1.run.app/static/uploads/1740843919403-image.png" 
-              alt="Pastor Biniam Asefaw" 
-              className="w-full h-full object-cover object-top"
+              src="https://image-resource-service-130145399.us-central1.run.app/static/uploads/1740843335219-image.png" 
+              alt="Book Release - The Voice of God" 
+              className="w-full h-full object-cover object-center"
             />
             {/* Overlay for blend */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent md:bg-transparent"></div>
